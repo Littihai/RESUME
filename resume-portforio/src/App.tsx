@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import './index.css';
 
 const App = () => {
@@ -402,10 +403,6 @@ const App = () => {
           </div>
         </div>
       </div>
-     <>
-      {/* your app */}
-      <SpeedInsights />
-    </>
       {/* Contact Section */}
       <div id="contact">
         <div className="contact-inner">
@@ -421,7 +418,11 @@ const App = () => {
           </div>
         </div>
       </div>
-
+      <>
+        {/* your app */}
+        <SpeedInsights />
+        <Analytics />
+      </>
       <footer>© 2025 Littichai Yorach (RITZ-PRIME) · Full Stack Developer · github.com/Littihai</footer>
     </>
   );
